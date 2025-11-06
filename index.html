@@ -320,7 +320,7 @@
 							<img src="designs/DESIGN 50 50.png" alt="Design 50x50"/>
 							<div class="item-content">
 								<span class="item-category">Design</span>
-								<h3>Design Publicitaire 50x50</h3>
+								<h3>Design Publicitaire </h3>
 								<div class="item-actions">
 					<a class="proj-link" href="#"
 						data-title="Design Publicitaire 50x50"
@@ -372,24 +372,7 @@
 						</div>
 					</article>
 
-					<article class="masonry-item" data-category="design">
-						<div class="item-inner">
-							<img src="/COVER /Design-05.jpg" alt="Design Social Media"/>
-							<div class="item-content">
-								<span class="item-category">Design</span>
-								<h3>Social Media Design</h3>
-								<div class="item-actions">
-					<a class="proj-link" href="#"
-						data-title="Social Media Design"
-						data-img="/COVER /Design-05.jpg"
-						data-url="https://www.behance.net/gallery/237854059/Social-Media-Design-Blondin-Office">
-						<svg viewBox="0 0 24 24" class="icon"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M12 20s8-4 8-8c0-4-3-8-8-8s-8 4-8 8c0 4 8 8 8 8z"/></svg>
-						Voir le projet
-					</a>
-								</div>
-							</div>
-						</div>
-					</article>
+				
 
 					<article class="masonry-item" data-category="motion">
 						<div class="item-inner">
@@ -750,6 +733,13 @@
 		const navLinks = document.querySelector('.nav-links');
 		navToggle && navToggle.addEventListener('click', () => {
 			navLinks.classList.toggle('open');
+		});
+
+		// Close menu on outside click
+		document.addEventListener('click', (e) => {
+			if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+				navLinks.classList.remove('open');
+			}
 		});
 
 		// Active section highlight

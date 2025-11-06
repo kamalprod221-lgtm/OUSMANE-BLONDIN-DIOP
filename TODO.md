@@ -12,3 +12,8 @@
 - [x] Ajouter max-width:100% pour toutes les images
 - [x] Améliorations générales : Espacements, couleurs, accessibilité (contraste, focus)
 - [x] Étapes de suivi : Tester sur appareils/émulateurs, vérifier accessibilité et performances
+
+## Nouvelles animations hero
+
+- [x] Modifier l'animation du nom "Ousmane Blondin Diop" : révélation lettre par lettre avec éclat subtil (glow pulse)
+- [x] Ajouter une animation légère sur "Blondin Office" : zoom entrant avec léger rebond

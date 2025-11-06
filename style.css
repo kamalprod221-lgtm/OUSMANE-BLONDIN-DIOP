@@ -59,84 +59,58 @@ body{
 @keyframes particle-float{0%{transform:translateY(0) rotate(0deg);opacity:0}50%{opacity:1}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
 .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:80px 20px}
 .hero h1{font-size:clamp(24px,4.5vw,44px);margin:10px 0}
+.logo-anim {
+    animation: zoomBounce 1.5s ease-out 0.5s both, wiggle 2s ease-in-out 2s infinite;
+}
+
+@keyframes zoomBounce {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 .name {
     color: var(--blue-300);
     font-weight: 700;
-    animation: nameMotion 2s ease-out 1.5s both;
     background: linear-gradient(45deg, var(--blue-300), #ffffff, var(--blue-700));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: colorShift 4s ease-in-out infinite;
 }
 
-@keyframes nameMotion {
-    0% {
-        transform: translateY(50px) scale(0.8) rotate(-5deg);
-        opacity: 0;
-        filter: blur(8px);
-        text-shadow: 0 0 0 rgba(0, 150, 255, 0);
+@keyframes colorShift {
+    0%, 100% {
+        background: linear-gradient(45deg, #ff6b35, #ff8a5c, #ffb366);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     25% {
-        transform: translateY(20px) scale(0.9) rotate(2deg);
-        opacity: 0.3;
-        filter: blur(4px);
-        text-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+        background: linear-gradient(45deg, #ff4500, #ff6347, #ffa500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     50% {
-        transform: translateY(-10px) scale(1.1) rotate(-1deg);
-        opacity: 0.7;
-        filter: blur(1px);
-        text-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+        background: linear-gradient(45deg, #ff7f50, #ff8c00, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     75% {
-        transform: translateY(5px) scale(1.05) rotate(0.5deg);
-        opacity: 0.9;
-        filter: blur(0px);
-        text-shadow: 0 0 30px rgba(0, 150, 255, 0.7);
-    }
-    100% {
-        transform: translateY(0) scale(1) rotate(0deg);
-        opacity: 1;
-        filter: blur(0);
-        text-shadow: 0 0 40px rgba(0, 150, 255, 0.8);
-    }
-}
-
-/* Animation delay for each letter */
-.letter-anim:nth-child(1) { animation-delay: 0.1s; }
-.letter-anim:nth-child(2) { animation-delay: 0.15s; }
-.letter-anim:nth-child(3) { animation-delay: 0.2s; }
-.letter-anim:nth-child(4) { animation-delay: 0.25s; }
-.letter-anim:nth-child(5) { animation-delay: 0.3s; }
-.letter-anim:nth-child(6) { animation-delay: 0.35s; }
-.letter-anim:nth-child(7) { animation-delay: 0.4s; }
-.letter-anim:nth-child(8) { animation-delay: 0.45s; }
-.letter-anim:nth-child(9) { animation-delay: 0.5s; }
-.letter-anim:nth-child(10) { animation-delay: 0.55s; }
-.letter-anim:nth-child(11) { animation-delay: 0.6s; }
-.letter-anim:nth-child(12) { animation-delay: 0.65s; }
-.letter-anim:nth-child(13) { animation-delay: 0.7s; }
-.letter-anim:nth-child(14) { animation-delay: 0.75s; }
-.letter-anim:nth-child(15) { animation-delay: 0.8s; }
-.letter-anim:nth-child(16) { animation-delay: 0.85s; }
-.letter-anim:nth-child(17) { animation-delay: 0.9s; }
-.letter-anim:nth-child(18) { animation-delay: 0.95s; }
-.letter-anim:nth-child(19) { animation-delay: 1s; }
-.letter-anim:nth-child(20) { animation-delay: 1.05s; }
-
-
-
-/* Support pour Firefox */
-@-moz-document url-prefix() {
-    .letter-anim {
-        background: var(--blue-300);
-        color: transparent;
-        -moz-text-fill-color: transparent;
-        animation: revealLetter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    }
-    .letter-anim.highlight {
-        background: linear-gradient(90deg, #fff, var(--blue-300));
-        -moz-text-fill-color: transparent;
+        background: linear-gradient(45deg, #ff6347, #ffa07a, #ffcc5c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 }
 
